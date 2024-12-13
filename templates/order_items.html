@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Order Items</title>
+    <link rel="stylesheet" href="../static/order_items.css" />
+    <link rel="stylesheet" href="../static/navbar.css" />
+    <link rel="stylesheet" href="../static/footer.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="../static/hackathon_logo.png" alt="logo" />
+      <a href="/profile">PROFILE</a>
+      <a href="/main">HOME</a>
+      <a href="/take_orders">DELIVER ORDER</a>
+      <a href="/canteens">PLACE ORDER</a>
+      <a href="/about">ABOUT</a>
+    </nav>
+    <h1>Order Details</h1>
+    <table>
+      <tr>
+        <th>Menu Item</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+      {% for order_item in order_items %}
+      <tr>
+        <td>{{ order_item[0] }}</td>
+        <td>{{ order_item[1] }}</td>
+        <td>Rs. {{ order_item[2] }} per item</td>
+        <td>Rs. {{ order_item[2] * order_item[1] }} </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <footer>
+      <br>
+      <p>Satiate your cravings or Turn your spare time into extra cash! Join our community and let us serve you with all that we can. Know more <u> <b> <a
+                      href="/about">about us.</a> </u> </b> </p>
+      <p><b>IIITeats</b></p>
+      <br>
+  </footer> 
+  </body>
+</html>

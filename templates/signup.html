@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../static/signup.css" />
+    <link rel="stylesheet" href="../static/navbar.css" />
+    <link rel="stylesheet" href="../static/footer.css" />
+
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/signup">Sign Up</a>
+      <a href="/login">Login</a>
+
+    </nav>
+    <div class="content">
+      <div class="container">
+        <h1>Sign Up</h1>
+        <form action="/signup" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="room_no">Room Number:</label>
+          <input type="text" id="room_no" name="room_no" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="contact">Contact Number:</label>
+          <input type="text" id="contact" name="contact" required />
+
+          <label for="hostel">Hostel Name:</label>
+          <input type="text" id="hostel" name="hostel" required />
+
+          <input type="submit" value="Sign Up" />
+        </form>
+      </div>
+    </div>
+    <footer>
+      <br>
+      <p>Satiate your cravings or Turn your spare time into extra cash! Join our community and let us serve you with all that we can. Know more <u> <b> <a
+                      href="/about">about us.</a> </u> </b> </p>
+      <p><b>IIITeats</b></p>
+      <br>
+  </footer> 
+  </body>
+</html>

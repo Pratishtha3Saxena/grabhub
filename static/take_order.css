@@ -1,0 +1,95 @@
+/* Style the table */
+body {
+  background-color: #1f1e1e;
+
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(31, 9, 9, 0.5),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2017%2F08%2F17%2FGettyImages-545286388-2000.jpg&q=60%27");
+  padding: 7%;
+  margin-top: 3.5%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 70px;
+
+  letter-spacing: 3px;
+
+  text-shadow: 2px 3px 3px black;
+}
+p {
+  font-size: 20px;
+}
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-left: 10%;
+  margin-bottom: 6%;
+}
+
+th {
+  text-align: center;
+  padding: 1%;
+  font-weight: normal;
+  font-size: 26px;
+  color: rgb(253, 228, 177);
+  border-bottom: 1px solid rgb(196, 166, 97);
+  letter-spacing: 2px;
+}
+
+td {
+  color: rgb(238, 223, 196);
+  padding: 1%;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid rgba(247, 231, 178, 0.311);
+  letter-spacing: 2px;
+}
+/* CSS for the deliver button */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #af954c;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3d2d09;
+}
+
+button:active {
+  background-color: #8e623e;
+}
+
+a:visited {
+  color: antiquewhite;
+}
+a:hover {
+  color: rgb(190, 122, 32);
+}
+
+.flash-messages {
+  margin-top: 5%;
+  color: rgb(17, 10, 0);
+  text-align: center;
+  font-style: italic;
+  background-color: #ffffffde;
+  padding: 0.5%;
+  width: 20%;
+  margin-left: 40%;
+}

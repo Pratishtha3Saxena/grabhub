@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Delivery Dashboard</title>
+    <link rel="stylesheet" href="../static/delivery_dashboard.css" />
+    <link rel="stylesheet" href="../static/navbar.css" />
+    <link rel="stylesheet" href="../static/footer.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="../static/hackathon_logo.png" alt="logo" />
+      <a href="/profile">PROFILE</a>
+      <a href="/main">HOME</a>
+      <a href="/take_orders">DELIVER ORDER</a>
+      <a href="/canteens">PLACE ORDER</a>
+      <a href="/about">ABOUT</a>
+    </nav>
+    <h1>Delivery Dashboard</h1>
+    <table>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer Name</th>
+        <th>Delivery Status</th>
+        <th>Action</th>
+        <th>View Details</th>
+      </tr>
+      {% for order in orders %}
+      <tr>
+        <td>{{ order[0] }}</td>
+        <td>{{ order[1] }}</td>
+        <td>{{ order[2] }}</td>
+        <td>
+          <form method="post" action="/mark-delivered/{{ order[0] }}">
+            <button type="submit">Mark as Delivered</button>
+          </form>
+        </td>
+        <td><a href="/order_items/{{ order[0] }}">View Details</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <footer>
+      <br>
+      <p>Satiate your cravings or Turn your spare time into extra cash! Join our community and let us serve you with all that we can. Know more <u> <b> <a
+                      href="/about">about us.</a> </u> </b> </p>
+      <p><b>IIITeats</b></p>
+      <br>
+  </footer> 
+  </body>
+</html>

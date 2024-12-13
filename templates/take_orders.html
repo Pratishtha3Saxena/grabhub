@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Take Orders</title>
+    <link rel="stylesheet" type="text/css" href="../static/take_order.css" />
+    <link rel="stylesheet" href="../static/navbar.css" />
+    <link rel="stylesheet" href="../static/footer.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="../static/hackathon_logo.png" alt="logo" />
+      <a href="/profile">PROFILE</a>
+      <a href="/main">HOME</a>
+      <a href="/take_orders">DELIVER ORDER</a>
+      <a href="/canteens">PLACE ORDER</a>
+      <a href="/about">ABOUT</a>
+    </nav>
+    <h1>
+      Deliver
+      <br />
+      <p>Click on View More to view Order Details</p>
+      <p style="font-weight: normal;font-style: italic;">Delivering each item gets you an easy Rs. 20</p>
+    </h1>
+
+    <table>
+      <tr>
+        <th>Canteen</th>
+        <th>Deliver At</th>
+        <th>Deliver To</th>
+        <th>Delivery Status</th>
+        <th>Total Earning</th>
+      </tr>
+      {% for order in orders %}
+      {% if order[6]!=session['user_id'] %}
+      <tr>
+        <td>{{ order[1] }}</td>
+        <td>{{ order[2] }}</td>
+        <td>{{ order[3] }}</td>
+        <td>{{ order[4] }}</td>
+        <td>{{ order[5] * 20 }}</td>
+        <td>
+          <form method="post" action="/deliver">
+            <input type="hidden" name="order_id" value="{{ order[0] }}" />
+            <button type="submit">Deliver</button>
+          </form>
+        </td>
+        <td><a href="/order_items/{{ order[0] }}">View Details</a></td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <div class="flash-messages">
+      {% for message in messages %}
+      <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+    <footer>
+      <br>
+      <p>Satiate your cravings or Turn your spare time into extra cash! Join our community and let us serve you with all that we can. Know more <u> <b> <a
+                      href="/about">about us.</a> </u> </b> </p>
+      <p><b>IIITeats</b></p>
+      <br>
+  </footer> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        setTimeout(function () {
+          $(".flash-messages").fadeOut("slow");
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

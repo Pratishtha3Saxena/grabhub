@@ -1,0 +1,114 @@
+body {
+  padding: 0px 0px;
+  margin: 0px 0px;
+  /* background-color: rgb(196, 160, 113); */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(6, 1, 7, 0.685),
+      rgba(12, 5, 26, 0.386)
+    ),
+    url("https://cutewallpaper.org/21/fast-food-wallpaper/Wallpaper-tomato-hamburger-Patty-sandwich-fast-food-bun-.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* backdrop-filter: brightness(60%); */
+  background-size: cover;
+  color: rgb(255, 254, 252);
+  /* backdrop-filter: blur(15px); */
+}
+p {
+  margin: 0px 0px;
+}
+.title {
+  font-size: 80px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.692);
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box .can {
+  border-radius: 10px;
+  background-color: #d6a253c0;
+  color: rgb(255, 253, 249);
+  text-shadow: 2px 2px 2px black;
+  border: none;
+  box-shadow: 6px 6px 20px black;
+  width: 30%;
+  padding: 30px 40px;
+  margin: 10px 20px;
+  cursor: pointer;
+  font-size: 50px;
+}
+.box .can:hover {
+  filter: brightness(150%);
+  font-size: 55px;
+}
+.content {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  margin: 20px 50px;
+}
+.content2 {
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* width:80%; */
+}
+.content .foodtypebox {
+  width: 25%;
+  /* border:2px solid rgb(197, 191, 191);
+         */
+  background-color: #21170a8c;
+  box-shadow: 4px 4px 15px black;
+  border-radius: 6px;
+  font-size: 45px;
+  margin: 5px 25px;
+  padding: 8px 55px;
+}
+.content2 .menuItem img {
+  width: 280px;
+  height: 280px;
+  border-radius: 6px;
+}
+.content2 .menuItem {
+  border: 2px solid rgb(207, 200, 200);
+  padding: 30px 30px;
+  margin: 30px 30px;
+  border-radius: 5px;
+}
+/* .content2 .menuItem{
+        
+    } */
+.content2 .menuItem button {
+  cursor: pointer;
+  font-size: 18px;
+  margin: 4px 19px;
+  border-radius: 5px;
+  background-color: rgb(176, 209, 209);
+}
+.content2 .menuItem #input {
+  display: inline;
+  width: 30px;
+}
+.rate {
+  width: 20%;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(160, 96, 13, 0.808);
+  text-align: center;
+  margin-left: 40%;
+  padding: 2% 0%;
+}
+.rate:hover {
+  color: rgb(255, 224, 51);
+  font-size: 35px;
+}
