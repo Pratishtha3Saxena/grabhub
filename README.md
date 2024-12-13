@@ -1,4 +1,3 @@
-# Hackathon
 
 # IIITeats: _A website for placing orders and taking deliveries_
 
